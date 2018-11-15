@@ -674,7 +674,7 @@ if ($opt{'B'} =~ /bamParse/) {
 					} elsif ($P[3]<$EXCLUSIONS{$P[2]}{$excludeWin}) {
 						if ($readEnd<=$EXCLUSIONS{$P[2]}{$excludeWin}) {
 							$excludeFlag = 1;
-						} elsif (($readEnd-$EXCLUSIONS{$P[2]}{$excludeWin})/length($P[9])>=0.5) {
+						} elsif (($readEnd-$EXCLUSIONS{$P[2]}{$excludeWin})/length($P[9])<=0.5) {
 							$excludeFlag = 1;
 						}
 					}
